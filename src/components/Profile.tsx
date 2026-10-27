@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Profile } from "@/data/profile";
 
-export default function Profile({ name, bio, avatarUrl }: Profile) {
+export default function Profile({ name, role, bio, motto, avatarUrl }: Profile) {
   return (
     <header className="flex flex-col items-center text-center">
       <div className="rounded-full bg-white/70 p-1.5 shadow-[0_18px_40px_-14px_rgba(150,90,50,0.35),0_2px_6px_rgba(150,90,50,0.08)] ring-1 ring-white/80">
@@ -15,7 +15,11 @@ export default function Profile({ name, bio, avatarUrl }: Profile) {
         />
       </div>
       <h1 className="mt-6 text-2xl font-semibold tracking-tight">{name}</h1>
-      <p className="mt-2 text-[15px] leading-relaxed text-muted">{bio}</p>
+      <p className="mt-1.5 text-sm font-medium tracking-wide text-[#b4704a]">{role}</p>
+      <p className="mt-3 max-w-xs text-[15px] leading-relaxed text-muted">{bio}</p>
+      <p className="mt-4 text-[13px] italic leading-relaxed text-muted/80">
+        “{motto}”
+      </p>
     </header>
   );
 }

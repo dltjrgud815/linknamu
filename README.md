@@ -27,13 +27,16 @@ src/
   app/
     layout.tsx      # 루트 레이아웃 (메타데이터, 한글 폰트)
     page.tsx        # 링크나무 메인 페이지
+    resume/page.tsx # 경력 & 포트폴리오 페이지 (/resume)
     globals.css     # Tailwind + 테마 변수
   components/
-    Profile.tsx     # 프로필 사진 / 이름 / 한줄 소개
-    LinkCard.tsx    # 링크 카드 1개
+    Profile.tsx     # 프로필 사진 / 이름 / 직무 / 소개 / 가치관
+    LinkCard.tsx    # 링크 카드 1개 (외부 링크 · mailto · 내부 경로 지원)
     LinkList.tsx    # 링크 카드 목록
+    resume/         # /resume 페이지용 섹션 · 경력 · 프로젝트 · 태그 컴포넌트
   data/
     profile.ts      # 프로필 · 링크 데이터와 타입 정의
+    resume.ts       # 경력 · 프로젝트 · 기술 스택 · 교육 데이터
 ```
 
 ## 환경 변수
